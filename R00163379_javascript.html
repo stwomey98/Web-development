@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!-- Author stephen twomey -->
+<html lang="en-IE">
+	<head>
+		<h1>The Seven Dwarfs</h1>
+		<meta charset="utf-8">
+	<title>Seven dwarfs</title>
+	<script>
+			function changedwarf() 
+			{
+				var x = Math.floor((Math.random() * 7) + 1);
+				if (x == 1)
+				{
+					document.getElementById("dwarf").innerHTML =
+					"<h3>Dopey</h3>" + "<img src='C:\Users\steph\images\dopey.png' alt='Dopey'" + "<p> As dopey you are jokey, silly and the youngest of the group</p>"; 
+				}
+				if (x == 2)
+				{
+					document.getElementById("dwarf").innerHTML =
+					"<h3>Bashful</h3>" + "<img src='C:\Users\steph\images\bashful.png' alt='Bashful'" + "<p> As bashful you are shy and coy</p>"; 
+				}
+				if (x == 3)
+				{
+					document.getElementById("dwarf").innerHTML =
+					"<h3>Sneezy</h3>" + "<img src='C:\Users\steph\images\sneezy.jpg' alt='Sneezy'" + "<p> As sneezy you have a sever hay fever, sneeze constantly and can't talk much</p>"; 
+				}
+				if (x == 4)
+				{
+					document.getElementById("dwarf").innerHTML =
+					"<h3>Sleepy</h3>" + "<img src='C:\Users\steph\images\sleepy.jpg' alt='Sleepy'" + "<p> As sleep you are always weary, droopy-eyed and eager to fall asleep</p>"; 
+				}
+				if (x == 5)
+				{
+					document.getElementById("dwarf").innerHTML =
+					"<h3>Happy</h3>" + "<img src='C:\Users\steph\images\happy.jpg' alt='Happy'" + "<p> As happy you are a very bubbly and bright</p>";
+				}
+				if (x == 6)
+				{
+					document.getElementById("dwarf").innerHTML =
+					"<h3>Grumpy</h3>" + "<img src='C:\Users\steph\images\grumpy.png' alt='Grumpy'" + "<p> As grumpy you live out your days with a sour deposition</p>"; 
+				}
+				if (x == 7)
+				{
+					document.getElementById("dwarf").innerHTML =
+					"<h3>Doc</h3>" + "<img src='C:\Users\steph\images\doc.png' alt='Doc'" +"<p> As doc you are the self-proclaimed leader of the seven dwarfs, you often bumbleand stammer</p>"; 
+				}
+			}
+			function slidechange() {
+				var x = document.getElementById("mypage").value;
+				if (x>80) {
+						document.getElementById("opinion").innerHTML="love it";}
+				else if (x>60) {
+						document.getElementById("opinion").innerHTML="good job";}
+				else if (x>40) {
+						document.getElementById("opinion").innerHTML="it's meh";}
+				else  {
+						document.getElementById("opinion").innerHTML="not the best";}
+				}
+		</script>
+	</head>
+<body>
+	<header>
+		<p>Movie links</p>
+		<a href="http://www.imdb.com/title/tt0029583/">imdb link</a>
+		<a href="http://en.wikipedia.org/wiki/Seven_Dwarfs">wiki link</a>
+	</header>
+	<main>
+	<h2>Which dwarf are you?</h2>
+	<img src="C:\Users\steph\images\seven_dwarves.jpg" alt="seven dwarfs" height="350" width="400">
+		<div id="left">
+			<main id="main">
+			<button type="button" onclick="changedwarf()" id="choosebutton">Which dwarf are you?</button>
+			<div id="dwarf"></div>
+		</div>
+	</main>
+	<footer>
+		<details>
+			<summary>all rights and images are reserved to Disneytoon studios, &#169; 2018</summary>
+			<p>My details are <a href="mailto:stephen.twomey1@mycit.ie">stephen.twomey1@mycit.ie</a></p>
+		</details>
+	</footer>
+	<form onsubmit="return false;">
+		<label>Do you like my website?</label>
+		<input type="range" min="0" max="100" id="mypage" onchange="slidechange()"><span id="opinion"></span>
+	</form>
+</body>
+</html>
